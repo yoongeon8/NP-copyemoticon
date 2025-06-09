@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이모티콘</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1{
+            color: coral;
+            text-align: center;
+            font-size: 3rem;
+            margin: 0;
+            margin-bottom: 2.5rem;
+            text-shadow: 4px 4px 1px #73290e;
+        }
+        h3{
+            text-align: center;
+        }
+        #navul{
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding-left: 0;
+            gap: 20px;
+        }
+        ul > li > a{
+            text-decoration: none;
+            color: #552F2F;
+            font-weight: 600;
+        }
+        ul > li > a:hover{
+            background-color: #f3d6d6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Copy Emoticon</h1>
+    <nav>
+        <ul id="navul">
+            <li><a href="ascll.html?group=ascll">이모티콘</a></li>
+            <li><a href="unicodeart.html?group=unicode">유니코드 아트</a></li>
+            <li><a href="bookmark.html">즐겨찾기</a></li>
+        </ul>
+    </nav>
+    <div id="input-box">
+        <div id="textarea-box">
+            <textarea id="emoticon" placeholder="이모티콘을 추가해보아요!"></textarea>
+        </div>
+        <div id="btn-div">
+            <button id="emojiBtn" onclick="saveemoji()">이모티콘 추가</button>
+        </div>
+    </div>
+    <h3>가장 많이 카피한 이모티콘</h3>
+    <div id="bestEmoji"></div>
+    <h3 id="eh">이모티콘</h3>
+    <div id="makediv"></div>
+    <script src="index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'BagelFatOne-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/BagelFatOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+    body{
+        background-color: #FFF7EB;
+        font-family: 'BagelFatOne-Regular';
+    }
+    #emoticon{
+        min-width: 200px;
+        min-height: 50px;
+        font-family: 'Courier New', monospace;
+        white-space: pre;
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 10px;
+        resize: none;
+        overflow: hidden;
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+    pre {
+        font-family: 'Courier New', monospace;
+        white-space: pre;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.2;
+        background: white;
+        padding: 10px;
+        border: 1px solid #aaa;
+        min-width: 50%;
+        min-height: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    #makediv > pre{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    #bestEmoji > pre{
+        text-align: center;
+        min-width: 40rem;
+        min-height: 1rem;
+    }
+    .bookmark_toggle{
+        background-color: #BEB9B3;
+        border: none;
+        padding: 0 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon30 {
+        width: 25px;
+        height: 25px;
+    }
+    /* 노란 별 (즐겨찾기됨) */
+    .bookmark_toggle .yellow {
+        display: none;
+    }
+    .bookmark_toggle.active .yellow {
+        display: block;
+    }
+    .bookmark_toggle.active .white {
+        display: none;
+    }
+    /* 흰 별 (즐겨찾기 안됨) */
+    .bookmark_toggle .white {
+        display: block;
+    }
+    .bookmark_toggle.active .white {
+        display: none;
+    }
+    .emoji-line {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        margin-bottom: 10px;
+    }
+    .emoji-btn{
+        padding: 0 10px;
+        cursor: pointer;
+    }
+    #textarea-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #btn-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

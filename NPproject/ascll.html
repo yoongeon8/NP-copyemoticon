@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ascll art</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #home{
+            font-size: 1.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 1px #73290e;
+        }
+        #home > a{
+            text-decoration: none;
+            color: coral;
+        }
+        ul{
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding-left: 0;
+            gap: 20px;
+        }
+        ul > li > a{
+            text-decoration: none;
+            color: #552F2F;
+            font-weight: 600;
+        }
+        ul > li > a:hover{
+            text-shadow: 2px 2px 1px #a9807993;
+            background-color: #f3d6d6;
+        }
+        h3{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            display: inline-block;
+            margin: 0;
+            font-size: 2rem;
+            color: #552F2F;
+            text-shadow: 3px 3px 1px #a9807993;
+        }
+        #head{
+            display: flex;
+            gap: 40%;
+        }
+    </style>
+    <script src="index.js" defer></script>
+</head>
+<body onload="makeemoji(); emojiRank()">
+    <header id="head">
+        <h4 id="home"><a href="index.html">Home</a></h4>
+        <h1>이모티콘 아트</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="unicodeart.html?group=unicode">유니코드 아트</a></li>
+            <li><a href="bookmark.html">즐겨찾기</a></li>
+        </ul>
+    </nav>
+    <h3>이모티콘</h3>
+    <div id="makediv"></div>
+</body>
+</html>
