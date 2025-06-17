@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교 급식</title>
+</head>
+<body>
+    <button onclick="getMealInfo()">학교 급식 가지고 오기</button>
+    <div id="mealInfo"></div>
+    <script>
+        getMealInfo();
+        function getMealInfo(){
+            fetch("https://open.neis.go.kr/hub/mealServiceDietInfo?ATPT_OFCDC_SC_CODE=B10&SD_SCHUL_CODE=7011569&MLSV_YMD=20250613&Type=json")
+            .then(response => response.json())
+            .then(data => {
+                console.log("데이터:",data)
+                console.log(data.mealServiceDietInfo[1].row[1].DDISH_NM);
+                const mealInfo = document.getElementById("mealInfo");
+                for(let i = 0; i < data.mealServiceDietInfo[1].row.length; i++){
+                    mealInfo.innerHTML += data.mealServiceDietInfo[1].row[i].DDISH_NM;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

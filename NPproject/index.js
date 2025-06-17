@@ -2,8 +2,8 @@ let emojiArray = JSON.parse(localStorage.getItem("emoticon") || "[]");
 function saveemoji(){
     const emoticon = document.getElementById("emoticon").value;
     //입력한 것이 특수문자나 유니코드인지 판단, 또한 특수문자 유니코드 아스키아트안에 글자,숫자가 들어갈때만 저장되게 함.
-    if (/[^\w\sㄱ-ㅎ가-힣]/.test(emoticon.replace(/\n/g,''))){
-        if(/[\^oO0xX;:=@*\(\)\[\]\{\}￣ー▽≧≦Tㅜㅠ눈‿☆★⌒｀・゚]/.test(emoticon) || /^[\x20-\x7E\r\n\t]+$/.test(emoticon)){
+    if (!/^[a-zA-Z0-9가-힣\s]+$/.test(emoticon.replace(/\r?\n/g, ''))){
+        if(/[\^oO0xX;:=@*\(\)\[\]\{\}￣ー▽≧≦Tㅜㅠ눈‿☆★⌒｀・゚]/.test(emoticon.replace(/\r?\n/g, '')) ||  /^[\x20-\x7E\r\n\t]+$/.test(emoticon.replace(/\r?\n/g, ''))){
             const todoObj = {text:emoticon,group:"ascll",count:0, rank:null,checkmark:true};
             emojiArray.push(todoObj);
         }else if(/[\u2580-\u259F\u25A0-\u25FF\u2800-\u28FF\u2B00-\u2BFF]/.test(emoticon)){
